@@ -10,13 +10,14 @@ const airSuggest = require('./models/airSuggest');
 
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static(__dirname + "/public"));
 
 app.get('/airnomads/suggest', (req, res) => {
     res.render(
       'air_suggest.ejs',
       {
         airSuggest: airSuggest,
-        tabTitle: 'Air Nomads Character Suggestion',
+        tabTitle: 'Air Nomads Character Suggestions',
       }
     )
 })
@@ -54,13 +55,13 @@ app.get('/airNomads', (req, res) => {
 
 app.get('/airNomads/new', (req, res) => {
 	res.render('air_new.ejs', {
-		tabTitle: 'Air Nomads Create Character',
+		tabTitle: 'Air Nomads Character Creator',
 	})
 })
 
 app.get('/airNomads/:id', (req, res) => {
   res.render('air_show.ejs', {
-    tabTitle: 'Air Nomads',
+    tabTitle: 'Air Nomads Character Display',
     airNomads: airNomads[req.params.id],
   });
 })

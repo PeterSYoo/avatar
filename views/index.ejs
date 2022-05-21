@@ -5,14 +5,17 @@
   </head>
 <body>
   <div class="container">
-  <%- include('./partials/header.ejs')%>
+  <center><%- include('./partials/header.ejs')%></center>
   <br>
-  <ul>
-  <li><a href="/watertribe">Water Tribe</a></li>
-  <li><a href="/firenation">Fire Nation</a></li>
-  <li><a href="/earthkingdom">Earth Kingdom</a></li>
-  <li><a href="/airnomads">Air Nomads</a></li>
-  </ul>
+    <div class="row">
+      <div class="col-sm-12 d-flex justify-content-between">
+  <a href="/watertribe"><img src="https://static.wikia.nocookie.net/avatar/images/8/85/Water_Tribe_emblem.png/"><br><br><center><h5>Water Tribe</h5></center></a>
+  <a href="/firenation"><img src="https://static.wikia.nocookie.net/avatar/images/4/47/Fire_Nation_emblem.png"><br><br><center><h5>Fire Nation</h5></center></a>
+  <a href="/earthkingdom"><img src="https://static.wikia.nocookie.net/avatar/images/a/a4/Earth_Kingdom_emblem.png"><br><br><center><h5>Earth Kingdom</h5></center></a>
+  <a href="/airnomads"><img src="https://static.wikia.nocookie.net/avatar/images/f/f5/Air_Nomads_emblem.png"><br><br><center><h5>Air Nomads</h5></center></a>
+      </div>
+    </div>
+
   <%- include('./partials/footer.ejs')%>
   </div>
 </body>
