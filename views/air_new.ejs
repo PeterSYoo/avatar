@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <%- include('./partials/head.ejs')%>
+  <link rel="stylesheet" href="./css/air.css">
+  </head>
+<body>
+  <div class="container">
+  <%- include('./partials/header.ejs')%>
+  <br>
+  <form action="/airnomads" method="POST">
+    <div class="row">
+      <div class="col-sm-1">Name:</div>
+      <div class="col-sm-auto"><input type="text" name="name" placeholder="name"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-1">Town:</div>
+      <div class="col-sm-auto"><input type="text" name="town" placeholder="town"></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-1">Quote:</div>
+      <div class="col-sm-auto"><input type="text" name="quote" placeholder="quote"></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-auto"><input type="submit" value="Create"></form></div>
+      <div class="col-sm-auto">
+        <form action="/airnomads/suggest">
+          <input id="suggest-button" type="submit" value="Character Suggestions" />
+        </form>
+      </div>
+      <div class="col-sm-auto">
+        <form action="/airnomads">
+          <input id="back-button" type="submit" value="Back" />
+        </form>
+      </div>
+    </div>
+
+    
+  <%- include('./partials/footer.ejs')%>
+  </div>
+</body>
+</html>

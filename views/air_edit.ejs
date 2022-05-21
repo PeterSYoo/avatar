@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <%- include('./partials/head.ejs')%>
+  <link rel="stylesheet" href="./css/air.css">
+  </head>
+<body>
+  <div class="container">
+  <%- include('./partials/header.ejs')%>
+  <br>
+  <form action="/airnomads/<%=index%>?_method=PUT" method="POST">
+      <div class="row">
+        <div class="col-sm-1">Name:</div>
+        <div class="col-sm-5"><input type="text" name="name" value="<%=airNomads.name%>" /></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-1">Town:</div>
+        <div class="col-sm-5"><input type="text" name="town" value="<%=airNomads.town%>" /></div>
+        </div>
+      <div class="row">
+        <div class="col-sm-1">Quote:</div>
+        <div class="col-sm-5"><input type="text" name="quote" value="<%=airNomads.quote%>" /></div>
+      </div>
+      
+    <br>
+    <div class="row">
+      <div class="col-sm-auto"><input type="submit" value="Submit Changes" /></form></div>
+      <div class="col-sm-auto">
+        <form action="/airnomads">
+          <input id="back-button" type="submit" value="Back" />
+        </form>
+      </div>
+    </div>
+  <%- include('./partials/footer.ejs')%>
+  </div>
+</body>
+</html>

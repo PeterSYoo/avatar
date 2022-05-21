@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <%- include('./partials/head.ejs')%>
+  <link rel="stylesheet" href="./css/air.css">
+  </head>
+<body>
+  <div class="container">
+  <%- include('./partials/header.ejs')%>
+  <br>
+  <div class="row">
+
+    <div class="col-sm-auto">
+  <form action="/airnomads/suggest" method="POST">
+    <div class="row">
+      <div class="col-sm-1"><%= airSuggest[0].name %></div>
+      <input type="hidden" name="name" value="<%= airSuggest[0].name %>">
+      <input type="hidden" name="town" value="<%= airSuggest[0].town %>">
+      <input type="hidden" name="quote" value="<%= airSuggest[0].quote %>">
+    </div>
+    <input type="submit" value="Create">
+  </form>
+    </div>
+
+    <div class="col-sm-auto">
+  <form action="/airnomads/suggest" method="POST">
+    <div class="row">
+      <div class="col-sm-1"><%= airSuggest[1].name %></div>
+      <input type="hidden" name="name" value="<%= airSuggest[1].name %>">
+      <input type="hidden" name="town" value="<%= airSuggest[1].town %>">
+      <input type="hidden" name="quote" value="<%= airSuggest[1].quote %>">
+    </div>
+    <input type="submit" value="Create">
+  </form>
+  <br>
+  </div>
+
+  </div>
+  <div class="row">
+    <div class="col-sm-auto">
+      <form action="/airnomads/new">
+        <input id="back-button" type="submit" value="Back" />
+      </form>
+    </div>
+    </div>
+  <%- include('./partials/footer.ejs')%>
+  </div>
+</body>
+</html>
