@@ -10,32 +10,36 @@
   <br>
   <form action="/airnomads" method="POST">
     <div class="row">
-      <div class="col-sm-1">Name:</div>
-      <div class="col-sm-auto"><input type="text" name="name" placeholder="name"></div>
+      <div class="col-sm-2">Name:</div>
+      <div class="col-sm-3"><input class="form-control input-sm" id="inputsm"  type="text" name="name" placeholder="name"></div>
     </div>
     <div class="row">
-      <div class="col-sm-1">Image:</div>
-      <div class="col-sm-auto"><input type="text" name="img" placeholder="img url"></div>
+      <div class="col-sm-2">Image:</div>
+      <div class="col-sm-10"><input class="form-control input-sm" id="inputsm"  type="text" name="img" placeholder="img url"></div>
     </div>
     <div class="row">
-      <div class="col-sm-1">Town:</div>
-      <div class="col-sm-auto"><input type="text" name="town" placeholder="town"></div>
+      <div class="col-sm-2">Town:</div>
+      <div class="col-sm-3"><input class="form-control input-sm" id="inputsm"  type="text" name="town" placeholder="town"></div>
     </div>
     <div class="row">
-      <div class="col-sm-1">Quote:</div>
-      <div class="col-sm-auto"><input type="text" name="quote" placeholder="quote"></div>
+      <div class="col-sm-2">Youtube ID:</div>
+      <div class="col-sm-3"><input class="form-control input-sm" id="inputsm"  type="text" name="video" value="iLffJaXqUm8" /></div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2">Quote:</div>
+      <div class="col-sm-10"><input class="form-control input-sm" id="inputsm"  type="text" name="quote" placeholder="quote"></div>
     </div>
     <br>
     <div class="row">
-      <div class="col-sm-auto"><input type="submit" value="Create"></form></div>
+      <div class="col-sm-auto"><input class="btn btn-primary" type="submit" value="Create"></form></div>
       <div class="col-sm-auto">
         <form action="/airnomads/suggest">
-          <input id="suggest-button" type="submit" value="Character Suggestions" />
+          <input class="btn btn-primary" type="submit" value="Character Suggestions" />
         </form>
       </div>
       <div class="col-sm-auto">
         <form action="/airnomads">
-          <input id="back-button" type="submit" value="Back" />
+          <input class="btn btn-danger" id="back-button" type="submit" value="Back" />
         </form>
       </div>
     </div>

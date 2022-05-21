@@ -9,22 +9,46 @@
   <%- include('./partials/header.ejs')%>
   <br>
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-4">
       <div class="row">
         <img src="<%= airNomads.img %>">
       </div>
+      <br>
       <div class="row">
+        <div class="col-sm-2">
+        <h6>Name: </h6>
+        </div>
+        <div class="col-sm-10">
         <h6><%= airNomads.name %></h6>
+        </div>
       </div>
       <div class="row">
-        <h6><%= airNomads.town %></h6>
+        <div class="col-sm-2">
+          <h6>Town: </h6>
+        </div>
+        <div class="col-sm-10">
+          <h6><%= airNomads.town %></h6>
+        </div>
       </div>
       <div class="row">
-        <h6><%= airNomads.quote %></h6>
+          <div class="col-sm-2">
+            <h6>Quote: </h6>
+          </div>
+          <div class="col-sm-10">
+            <h6>"<%= airNomads.quote %>"</h6>
+          </div>
       </div>
     </div>
     <div class="col-sm-6">
-      Video
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= airNomads.video %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-auto">
+      <form action="/airnomads">
+        <input class="btn btn-danger" type="submit" value="Back" />
+      </form>
     </div>
   </div>
   <%- include('./partials/footer.ejs')%>

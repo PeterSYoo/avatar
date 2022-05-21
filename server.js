@@ -10,22 +10,6 @@ const airSuggest = require('./models/airSuggest');
 
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
-app.use(function( req, res, next ) { 
-  if ( req.query._method == 'DELETE' ) {        
-    req.method = 'DELETE'
-    req.url = req.path
-  }next(); });
-
-app.get('/airnomads/:id/edit', (req, res) => {
-    res.render(
-      'air_edit.ejs',
-      {
-        airNomads: airNomads[req.params.id],
-        index: req.params.id,
-        tabTitle: 'Air Nomads Character Editor',
-      }
-    )
-})
 
 app.get('/airnomads/suggest', (req, res) => {
     res.render(
@@ -68,6 +52,12 @@ app.get('/airNomads', (req, res) => {
   });
 })
 
+app.get('/airNomads/new', (req, res) => {
+	res.render('air_new.ejs', {
+		tabTitle: 'Air Nomads Create Character',
+	})
+})
+
 app.get('/airNomads/:id', (req, res) => {
   res.render('air_show.ejs', {
     tabTitle: 'Air Nomads',
@@ -75,10 +65,15 @@ app.get('/airNomads/:id', (req, res) => {
   });
 })
 
-app.get('/airNomads/new', (req, res) => {
-	res.render('air_new.ejs', {
-		tabTitle: 'Air Nomads Create Character',
-	})
+app.get('/airnomads/:id/edit', (req, res) => {
+  res.render(
+    'air_edit.ejs',
+    {
+      airNomads: airNomads[req.params.id],
+      index: req.params.id,
+      tabTitle: 'Air Nomads Character Editor',
+    }
+  )
 })
 
 app.post("/airNomads", (req, res) => {
