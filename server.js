@@ -68,6 +68,13 @@ app.get('/airNomads', (req, res) => {
   });
 })
 
+app.get('/airNomads/:id', (req, res) => {
+  res.render('air_show.ejs', {
+    tabTitle: 'Air Nomads',
+    airNomads: airNomads[req.params.id],
+  });
+})
+
 app.get('/airNomads/new', (req, res) => {
 	res.render('air_new.ejs', {
 		tabTitle: 'Air Nomads Create Character',
@@ -88,6 +95,8 @@ app.put(`/airNomads/:id`, (req, res) => {
   airNomads[req.params.id].name = req.body.name
   airNomads[req.params.id].town = req.body.town
   airNomads[req.params.id].quote = req.body.quote
+  airNomads[req.params.id].img = req.body.img
+  airNomads[req.params.id].video = req.body.video
   res.redirect(`/airNomads`)
 })
 

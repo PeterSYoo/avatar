@@ -9,8 +9,8 @@
   <%- include('./partials/header.ejs')%>
   <br>
   <div class="row">
-    <div class="col-sm-1"><h4>Name</h4></div>
-    <div class="col-sm-3"><h4>Image</h4></div>
+    <div class="col-sm-2"><h4>Name</h4></div>
+    <div class="col-sm-2"><h4>Image</h4></div>
     <div class="col-sm-2"><h4>Town</h4></div>
     <div class="col-sm-3"><h4>Video</h4></div>
     <div class="col-sm-2"><h4>Quote</h4></div>
@@ -18,10 +18,10 @@
         <% for (let i = 0; i < allAirNomads.length; i++) {%>
           <div class="row">
             <div class="col-sm-2">
-          <h6><%= allAirNomads[i].name %></h6>
+          <h6><a href="/airnomads/<%=i%>"><%= allAirNomads[i].name %></a></h6>
             </div>
-            <div class="col-sm-2">
-            <%= allAirNomads[i].image %>
+            <div class="col-sm-2" id="div-img">
+            <a href="/airnomads/<%=i%>"><img src="<%= allAirNomads[i].img %>" width="150px"></a>
             </div>
             <div class="col-sm-2">
               <h6><%= allAirNomads[i].town %></h6>

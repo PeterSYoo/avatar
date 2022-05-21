@@ -7,7 +7,26 @@
 <body>
   <div class="container">
   <%- include('./partials/header.ejs')%>
-
+  <br>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="row">
+        <img src="<%= airNomads.img %>">
+      </div>
+      <div class="row">
+        <h6><%= airNomads.name %></h6>
+      </div>
+      <div class="row">
+        <h6><%= airNomads.town %></h6>
+      </div>
+      <div class="row">
+        <h6><%= airNomads.quote %></h6>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      Video
+    </div>
+  </div>
   <%- include('./partials/footer.ejs')%>
   </div>
 </body>
