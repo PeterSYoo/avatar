@@ -6,7 +6,7 @@
 <body>
   <div class="container">
   <center><%- include('./partials/header.ejs')%></center>
-  <br>
+  <br><br><br><br>
     <div class="row">
       <div class="col-sm-12 d-flex justify-content-between">
   <a href="/watertribe"><img src="https://static.wikia.nocookie.net/avatar/images/8/85/Water_Tribe_emblem.png/"><br><br><center><h5>Water Tribe</h5></center></a>
@@ -15,8 +15,10 @@
   <a href="/airnomads"><img src="https://static.wikia.nocookie.net/avatar/images/f/f5/Air_Nomads_emblem.png"><br><br><center><h5>Air Nomads</h5></center></a>
       </div>
     </div>
-
-  <%- include('./partials/footer.ejs')%>
+    <div class="d-flex flex-column">
+      <div></div>
+      <div><%- include('./partials/footer.ejs')%></div>
+    </div>
   </div>
 </body>
 </html>

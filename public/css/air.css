@@ -5,12 +5,12 @@ body {
 
 a:link {
   text-decoration: none;
-  color: #a9922d;
+  color: #8e8d8d;
 }
 
 a:visited {
   text-decoration: none;
-  color: #a9922d;
+  color: #8e8d8d;
 }
 
 a:hover {
@@ -20,5 +20,5 @@ a:hover {
 
 a:active {
   text-decoration: none;
-  color: #a9922d;
+  color: #8e8d8d;
 }
