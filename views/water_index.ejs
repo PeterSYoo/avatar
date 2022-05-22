@@ -7,7 +7,61 @@
 <body>
   <div class="container">
   <%- include('./partials/header.ejs')%>
-
+  <br>
+  <div class="row">
+    <div class="col-sm-2"><h4>Name</h4></div>
+    <div class="col-sm-2"><h4>Image</h4></div>
+    <div class="col-sm-2"><h4>Town</h4></div>
+    <div class="col-sm-3"><h4>Video</h4></div>
+    <div class="col-sm-2"><h4>Quote</h4></div>
+  </div><hr>
+        <% for (let i = 0; i < allWaterTribe.length; i++) {%>
+          <div class="row">
+            <div class="col-sm-2">
+            <h6><a href="/waterTribe/<%=i%>"><%= allWaterTribe[i].name %></a></h6>
+            </div>
+            <div class="col-sm-2" id="div-img">
+            <a href="/waterTribe/<%=i%>"><img src="<%= allWaterTribe[i].img %>" width="150px"></a>
+            </div>
+            <div class="col-sm-2">
+              <h6><%= allWaterTribe[i].town %></h6>
+            </div>
+            <div class="col-sm-3">
+              <iframe width="230" src="https://www.youtube.com/embed/<%= allWaterTribe[i].video %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-sm-2">
+              <h7>"<%= allWaterTribe[i].quote %>"</h7>
+            </div>
+            <div class="col-sm-1">
+              <div class="row">
+              <form action="/waterTribe/<%=i; %>/edit">
+                <input class="btn btn-warning" type="submit" value="Edit" />
+              </form>
+              </div>
+              <br>
+              <div class="row">
+              <form action="/waterTribe/<%=i; %>?_method=DELETE" method="POST">
+                <input class="btn btn-danger" type="submit" value="Delete" />
+              </form>
+              </div>
+            </div>
+        </div>
+        <hr>
+        <% } %>
+        <div class="row">
+          <div class="col-sm-12 d-flex justify-content-between">
+            <div>
+        <form action="/waterTribe/new">
+          <input class="btn btn-primary" type="submit" value="New" />
+        </form>
+            </div>
+            <div>
+        <form action="/">
+          <input class="btn btn-success" type="submit" value="Home" />
+        </form>
+            </div>
+          </div>
+        </div>
   <%- include('./partials/footer.ejs')%>
   </div>
 </body>

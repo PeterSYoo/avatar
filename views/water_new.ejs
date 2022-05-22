@@ -7,7 +7,48 @@
 <body>
   <div class="container">
   <%- include('./partials/header.ejs')%>
+  <br>
+  <form action="/waterTribe" method="POST">
+    <div class="row">
+      <div class="col-sm-2">Name:</div>
+      <div class="col-sm-3"><input class="form-control input-sm" id="inputsm"  type="text" name="name" placeholder="name"></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-2">Image URL:</div>
+      <div class="col-sm-10"><input class="form-control input-sm" id="inputsm"  type="text" name="img" placeholder="img url"></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-2">Town:</div>
+      <div class="col-sm-3"><input class="form-control input-sm" id="inputsm"  type="text" name="town" placeholder="town"></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-2">Youtube ID:</div>
+      <div class="col-sm-3"><input class="form-control input-sm" id="inputsm"  type="text" name="video" placeholder="iLffJaXqUm8" /></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-2">Quote:</div>
+      <div class="col-sm-10"><input class="form-control input-sm" id="inputsm"  type="text" name="quote" placeholder="quote"></div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-sm-auto"><input class="btn btn-primary" type="submit" value="Create"></form></div>
+      <div class="col-sm-auto">
+        <form action="/waterTribe/suggest">
+          <input class="btn btn-primary" type="submit" value="Character Suggestions" />
+        </form>
+      </div>
+      <div class="col-sm-auto">
+        <form action="/waterTribe">
+          <input class="btn btn-danger" id="back-button" type="submit" value="Back" />
+        </form>
+      </div>
+    </div>
 
+    
   <%- include('./partials/footer.ejs')%>
   </div>
 </body>

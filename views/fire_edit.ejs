@@ -7,7 +7,48 @@
 <body>
   <div class="container">
   <%- include('./partials/header.ejs')%>
+  <br>
+  <form action="/fireNation/<%=index%>?_method=PUT" method="POST">
+  <div clas="row">
+    <div class="col-sm-12">
 
+      <div class="row">
+        <div class="col-sm-2">Name:</div>
+        <div class="col-sm-3"><input class="form-control input-sm" id="inputsm"  type="text" name="name" value="<%=fireNation.name%>" /></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-2">Image URL:</div>
+        <div class="col-sm-10"><input class="form-control input-sm" id="inputsm"  type="text" name="img" value="<%=fireNation.img%>" /></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-2">Town:</div>
+        <div class="col-sm-3"><input class="form-control input-sm" id="inputsm"  type="text" name="town" value="<%=fireNation.town%>" /></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-2">Youtube ID:</div>
+        <div class="col-sm-3"><input class="form-control input-sm" id="inputsm"  type="text" name="video" value="<%=fireNation.video%>" /></div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-2">Quote:</div>
+        <div class="col-sm-10"><input class="form-control input-sm" id="inputsm" type="text" name="quote" value="<%=fireNation.quote%>" /></div>
+      </div>
+
+    </div>
+  </div>
+      
+    <br>
+    <div class="row">
+      <div class="col-sm-auto"><input class="btn btn-primary" type="submit" value="Submit Changes" /></form></div>
+      <div class="col-sm-auto">
+        <form action="/fireNation">
+          <input class="btn btn-danger" type="submit" value="Back" />
+        </form>
+      </div>
+    </div>
   <%- include('./partials/footer.ejs')%>
   </div>
 </body>
