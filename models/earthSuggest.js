@@ -1,18 +1,18 @@
 const earthSuggest = [
   {
-    name: 'Appa',
-    town: 'Eastern Air Temple',
-    quote: 'Rawr',
+    name: 'Long Feng',
+    town: 'Eastern Kingdom',
+    quote: `Don't flatter yourself. You were never even a player.`,
   },
   {
-    name: 'Jinora',
-    town: 'Air Temple Island',
-    quote: 'Then she jumped into a volcano. It was so romantic.',
+    name: 'Aiwei',
+    town: 'Earth Kingdom',
+    quote: `That statue honors the first metalbender, Toph Beifong, who expanded the possibilities of what benders were capable of. Here, everyone is encouraged to reach his, or her, highest potential.`,
   },
   {
-    name: 'Opal',
-    town: 'Air Temple Island',
-    quote: `Wow, Avatar Korra. I can't believe you're really here. You are so amazing.`,
+    name: 'Suki',
+    town: 'Earth Kingdom',
+    quote: `I am a warrior, but I’m a girl, too.`,
   },
 ]
 

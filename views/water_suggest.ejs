@@ -2,47 +2,91 @@
 <html lang="en">
   <head>
   <%- include('./partials/head.ejs')%>
-  <link rel="stylesheet" href="/water.css">
+  <link rel="stylesheet" href="/css/water.css">
   </head>
 <body>
   <div class="container">
   <%- include('./partials/header.ejs')%>
   <br>
   <div class="row">
-
-    <div class="col-sm-auto">
-  <form action="/waterTribe/suggest" method="POST">
     <div class="row">
-      <div class="col-sm-1"><%= waterSuggest[0].name %></div>
-      <input type="hidden" name="name" value="<%= waterSuggest[0].name %>">
-      <input type="hidden" name="town" value="<%= waterSuggest[0].town %>">
-      <input type="hidden" name="quote" value="<%= waterSuggest[0].quote %>">
-    </div>
-    <input class="btn btn-primary" type="submit" value="Create">
-  </form>
+      <div class="col-sm-12">
+        <div class="row">
+          <div class="col-sm-4">
+            <form action="/watertribe/suggest" method="POST">
+              <div class="row">
+                <div class="col-sm-2"><h6>Name:</h6></div>
+                <div class="col-sm-10"><%= waterSuggest[0].name %></div>
+                <div class="col-sm-2"><h6>Town:</h6></div>
+                <div class="col-sm-10"><%= waterSuggest[0].town %></div>
+                <div class="col-sm-2"><h6>Quote:</h6></div>
+                <div class="col-sm-10"><%= waterSuggest[0].quote %></div>
+                <input type="hidden" name="name" value="<%= waterSuggest[0].name %>">
+                <input type="hidden" name="town" value="<%= waterSuggest[0].town %>">
+                <input type="hidden" name="quote" value="<%= waterSuggest[0].quote %>">
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-sm-auto">
+                  <input class="btn btn-primary" type="submit" value="Create">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-sm-4">
+            <form action="/watertribe/suggest" method="POST">
+              <div class="row">
+                <div class="col-sm-2"><h6>Name:</h6></div>
+                <div class="col-sm-10"><%= waterSuggest[1].name %></div>
+                <div class="col-sm-2"><h6>Town:</h6></div>
+                <div class="col-sm-10"><%= waterSuggest[1].town %></div>
+                <div class="col-sm-2"><h6>Quote:</h6></div>
+                <div class="col-sm-10"><%= waterSuggest[1].quote %></div>
+                <input type="hidden" name="name" value="<%= waterSuggest[1].name %>">
+                <input type="hidden" name="town" value="<%= waterSuggest[1].town %>">
+                <input type="hidden" name="quote" value="<%= waterSuggest[1].quote %>">
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-sm-auto">
+                  <input class="btn btn-primary" type="submit" value="Create">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-sm-4">
+            <form action="/watertribe/suggest" method="POST">
+              <div class="row">
+                <div class="col-sm-2"><h6>Name:</h6></div>
+                <div class="col-sm-10"><%= waterSuggest[2].name %></div>
+                <div class="col-sm-2"><h6>Town:</h6></div>
+                <div class="col-sm-10"><%= waterSuggest[2].town %></div>
+                <div class="col-sm-2"><h6>Quote:</h6></div>
+                <div class="col-sm-10"><%= waterSuggest[2].quote %></div>
+                <input type="hidden" name="name" value="<%= waterSuggest[2].name %>">
+                <input type="hidden" name="town" value="<%= waterSuggest[2].town %>">
+                <input type="hidden" name="quote" value="<%= waterSuggest[2].quote %>">
+              </div>
+              <br>
+              <div class="row">
+                <div class="col-sm-auto">
+                  <input class="btn btn-primary" type="submit" value="Create">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-auto">
+            <form action="/watertribe/new">
+              <input class="btn btn-danger" type="submit" value="Back" />
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="col-sm-auto">
-  <form action="/waterTribe/suggest" method="POST">
-    <div class="row">
-      <div class="col-sm-1"><%= waterSuggest[1].name %></div>
-      <input type="hidden" name="name" value="<%= waterSuggest[1].name %>">
-      <input type="hidden" name="town" value="<%= waterSuggest[1].town %>">
-      <input type="hidden" name="quote" value="<%= waterSuggest[1].quote %>">
-    </div>
-    <input class="btn btn-primary" type="submit" value="Create">
-  </form>
-  <br>
-  </div>
-
-  </div>
-  <div class="row">
-    <div class="col-sm-auto">
-      <form action="/waterTribe/new">
-        <input class="btn btn-danger" type="submit" value="Back" />
-      </form>
-    </div>
-    </div>
   <%- include('./partials/footer.ejs')%>
   </div>
 </body>

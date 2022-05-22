@@ -3,15 +3,15 @@ const app = express();
 const port = 3000;
 const methodOverride = require('method-override');
 const waterTribe = require('./models/waterTribe');
-const waterSuggest = require('./models/airSuggest');
+const waterSuggest = require('./models/waterSuggest');
 const fireNation = require('./models/fireNation');
-const fireSuggest = require('./models/airSuggest');
+const fireSuggest = require('./models/fireSuggest');
 const earthKingdom = require('./models/earthKingdom');
-const earthSuggest = require('./models/airSuggest');
+const earthSuggest = require('./models/earthSuggest');
 const airNomads = require('./models/airNomads');
 const airSuggest = require('./models/airSuggest');
 
-app.use(express.static(__dirname + "/public/css"));
+app.use(express.static(__dirname + "/public"));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 
@@ -193,15 +193,15 @@ app.post("/airNomads/suggest", (req, res) => {
 })
 app.post("/earthkingdom/suggest", (req, res) => {
   earthKingdom.push(req.body)
-  res.redirect("/airnomads")
+  res.redirect("/earthkingdom")
 })
 app.post("/firenation/suggest", (req, res) => {
   fireNation.push(req.body)
-  res.redirect("/airnomads")
+  res.redirect("/firenation")
 })
 app.post("/watertribe/suggest", (req, res) => {
   waterTribe.push(req.body)
-  res.redirect("/airnomads")
+  res.redirect("/watertribe")
 })
 
 app.put(`/airNomads/:id`, (req, res) => {
