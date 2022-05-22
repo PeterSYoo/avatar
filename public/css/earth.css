@@ -1,0 +1,24 @@
+body {
+  background-color: #bfc692;
+  color: #4A5A3F;
+}
+
+a:link {
+  text-decoration: none;
+  color: #445044;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #445044;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #8E965B;
+}
+
+a:active {
+  text-decoration: none;
+  color: #445044;
+}
