@@ -1,7 +1,9 @@
 const waterTribe = [
   {
     name: 'Sokka',
+    img: 'https://static1.cbrimages.com/wordpress/wp-content/uploads/2020/07/Sokka-In-Avatar-The-Last-Airbender.jpg',
     town: 'South Pole Sea',
+    video: '9EXdomrJLcE',
     quote: `Drink Cactus Juice! It'll Quench Ya! Nothing's Quenchier, It's The Quenchiest!`,
   },
   {
