@@ -11,7 +11,7 @@ const earthSuggest = require('./models/airSuggest');
 const airNomads = require('./models/airNomads');
 const airSuggest = require('./models/airSuggest');
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/public/css"));
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({ extended: false }));
 
