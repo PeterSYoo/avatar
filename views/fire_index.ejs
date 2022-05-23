@@ -18,19 +18,19 @@
         <% for (let i = 0; i < allFireNation.length; i++) {%>
           <div class="row">
             <div class="col-sm-2">
-            <h6><a href="/firenation/<%=i%>"><%= allFireNation[i].name %></a></h6>
+            <a href="/firenation/<%=i%>"><%= allFireNation[i].name %></a>
             </div>
             <div class="col-sm-2" id="div-img">
             <a href="/firenation/<%=i%>"><img src="<%= allFireNation[i].img %>" width="150px"></a>
             </div>
             <div class="col-sm-2">
-              <h6><%= allFireNation[i].town %></h6>
+              <%= allFireNation[i].town %>
             </div>
             <div class="col-sm-3">
               <iframe width="230" src="https://www.youtube.com/embed/<%= allFireNation[i].video %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="col-sm-2">
-              <h7>"<%= allFireNation[i].quote %>"</h7>
+              "<%= allFireNation[i].quote %>"
             </div>
             <div class="col-sm-1">
               <div class="row">

@@ -18,19 +18,19 @@
         <% for (let i = 0; i < allWaterTribe.length; i++) {%>
           <div class="row">
             <div class="col-sm-2">
-            <h6><a href="/waterTribe/<%=i%>"><%= allWaterTribe[i].name %></a></h6>
+            <a href="/waterTribe/<%=i%>"><%= allWaterTribe[i].name %></a>
             </div>
             <div class="col-sm-2" id="div-img">
             <a href="/waterTribe/<%=i%>"><img src="<%= allWaterTribe[i].img %>" width="150px"></a>
             </div>
             <div class="col-sm-2">
-              <h6><%= allWaterTribe[i].town %></h6>
+              <%= allWaterTribe[i].town %>
             </div>
             <div class="col-sm-3">
               <iframe width="230" src="https://www.youtube.com/embed/<%= allWaterTribe[i].video %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="col-sm-2">
-              <h7>"<%= allWaterTribe[i].quote %>"</h7>
+              "<%= allWaterTribe[i].quote %>"
             </div>
             <div class="col-sm-1">
               <div class="row">
